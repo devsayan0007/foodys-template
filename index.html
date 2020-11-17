@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foody's</title>
+  <link rel="desktop favicon icon" href="./assets/icons/bick-2.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./src/css/styles.css">
+  <link rel="stylesheet" href="./src/css/bottom-nav.css">
+  <link rel="stylesheet" href="./src/css/chat.css">
+  <link rel="stylesheet" href="./src/css/filter.css">
+  <link rel="stylesheet" href="./src/css/item-hover.css">
+  <link rel="stylesheet" href="./src/css/socialMedia.css">
+  <link rel="stylesheet" href="./src/css/multislider.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./src/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="./src/slick/slick-theme.css">
+  <style>
+     #aug{
+        text-align: center;
+        font-family: sans-serif;
+        background: linear-gradient(to bottom, #ff4902 10%, #fff 50%, #036d32 80%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        
+    }
+    .slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #09ae25;
+   background-color: #fff;
+}
+
+  </style>
+</head>
+
+<body onload="disableLoader()" style="background: #f3f7f8;">
+  <!-- preloder start -->
+  <div id="loading">
+
+    <div class="container text-center" id="loading-center">
+        <noscript>
+            <h1>!</h1> <h3><mark> Sorry ! Your Browser dose't support javascript</mark></h3>
+           <br>
+          </noscript>
+
+      <img src="./assets/icons/bick-2.png" alt="">
+      <h1 class="text-center mt-2">Welcome to Foody's Restaurants</h1>
+        <h4 class="text-center">Please Wait Page is loading</h4>
+        <div class="spinner-grow text-warning" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-primary" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-danger" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+    </div>
+  </div>
+  <!-- preloder end -->
+
+<!-- filter section start -->
+<div class="filter-price">
+  <img src="./assets/icons/filter.png" id="pf1" class="img-fluid" title="Filter" onclick="openfilter()">
+</div>
+
+<div id="myfilter" class="myfilter">
+  <a href="javascript:void(0)" class="close-filter-btn" id=""onclick="closefilter()">&times;</a>
+    <h4 class="text-center">filter</h4>
+  <hr class="style-hr">
+  <!-- <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a> -->
+</div>
+<!-- filter section end -->
+
+    <!-- sticky sicial media icon bar start -->
+    <div class="icon-bar" id="icon-bar-1">
+      <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+      <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+      <a href="#" class="instagram"><i class="fa fa-instagram"></i></a> 
+      <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+    </div>
+    <!-- sticky sicial media icon bar end -->
+
+    <!-- Back to top area start -->
+    <div class="container mt-5 pt-5" id="back-to-top-1">
+        <div class="row">
+          <div class="col-6 col-md-3 mx-auto">
+            <div class="row">
+              <div class="col-md-4 col-2">
+                <button class="btn btn-light text-primary" onclick="topFunction()" id="g2t">Back to top....
+                  <img src="./assets/icons/up.png" alt=""></button>
+              </div>
+              <div class="col-1 mx-auto">
+                <button class="btn btn-light text-primary" onclick="showSearchBar()" id="ssb2">
+                  <img src="./assets/icons/search.png" class="img-fluid"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- Back to top area end -->
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgb(5, 5, 5);">
+        <!-- <h1>Best Offer For Your</h1> -->
+        <h1 id="aug">15 AUGUST OFFER'S</h1>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body" style="background-color: rgb(5, 5, 5);">
+        <div class="row">
+          <div class="col-10 mx-auto">
+              <img class="card-img-top" id="popup-ad" src="./assets/food-img/popupadd1.jpg" style="height: 500px; width:100%;" alt="Card image">
+          </div>
+        </div>
+      </div>
+      <!-- Modal Footer area -->
+      <a href="#section1" class="btn btn-primary noThanks">Order Now</a>
+      <a class="btn btn-warning noThanks">No Thanks</a>
+    </div>
+
+  </div>
+  <!-- header section start -->
+  <header>
+    
+    <!-- navbar section start -->
+    <nav class="navbar navbar-expand-lg fixed-top style-nav">
+      <div class="dropdown">
+        <a class="navbar-brand style-foody-color" href="#">
+          <span class="h4 style-foody-h1">Foody's</span>
+        </a>
+
+        <div class="dropdown-content">
+          <div class="h6 desc">Foody's Restaurant</div>
+          <div id="info">
+            <p>
+              All Kind Of Bengali, Chinnies, Beriany
+              Food
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- horizontal navbar with collapse  start -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          
+            <li class="nav-item style-nav-hor-li">
+                <a class="nav-link h5" href="#" onclick="getLocation()">Location</a>
+            </li>
+            <li class="nav-item style-nav-hor-li">
+                <!-- <a class="nav-link h5" href="#">Delivary Date & Time</a> -->
+                <div class="dropdown">
+                    <!-- <button type="button" class="btn border dropdown-toggle" data-toggle="dropdown">
+                        Delivary Date & Time
+                    </button> -->
+                    <a class="nav-link h5 dropdown-toggle" data-toggle="dropdown" href="#">Delivary Date & Time</a>
+                    <div class="dropdown-menu">
+                      Time  <input type="time">
+                      <br>
+                      Date  <input type="date">
+                    </div>
+                  </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle h5" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Food's Menu
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Indian Food</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#IB">Biryani</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#IB">Mutton Biryani</a></li>
+                          <li><a class="dropdown-item" href="#IB">Chicken Biryani</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Roll</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Egg Roll</a></li>
+                          <li><a class="dropdown-item" href="#">Chicken Roll</a></li>
+                        </ul>
+                  </li>
+                      <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Fish</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Kerela Fish</a></li>
+                          <li><a class="dropdown-item" href="#">Hilsa Fish</a></li>
+                        </ul>
+                  </li>
+                      <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Samosa</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Vag Samosa</a></li>
+                          <li><a class="dropdown-item" href="#">Chicken Samosa</a></li>
+                        </ul>
+                  </li>
+                      <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Polow Rice</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Polow Rice Plain</a></li>
+                          <li><a class="dropdown-item" href="#">Chicken Samosa Special</a></li>
+                        </ul>
+                  </li>
+                      <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Chicken Kasha</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Chicken Kasha</a></li>
+                          <li><a class="dropdown-item" href="#">Butter Chicken Kasha</a></li>
+                        </ul>
+                  </li>
+                </ul>
+                </li>
+                <!--  -->
+                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Chinese Food</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Mix Chowmein</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Mix Chowmein Normal</a></li>
+                        <li><a class="dropdown-item" href="#">Mix Chowmein Special</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Chili Chicken</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Chili Chicken Norma</a></li>
+                        <li><a class="dropdown-item" href="#">Chili Chicken Special</a></li>
+                      </ul>
+                </li>
+                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Mix Fried Rice</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Mix Fried Rice Norma</a></li>
+                        <li><a class="dropdown-item" href="#">Mix Fried Rice Special</a></li>
+                      </ul>
+                </li>
+                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Momo</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Chicken Momo</a></li>
+                        <li><a class="dropdown-item" href="#">Veg Momo</a></li>
+                      </ul>
+                </li>
+              </ul>
+              </li>
+              <!--  -->
+              <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Fast Food</a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
+                      <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                    </ul>
+                  </li>
+            </ul>
+            </li>
+              <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Dessert Sweet <span class="badge badge-danger">10% OFF</span></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
+                      <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                    </ul>
+                  </li>
+            </ul>
+            </li>
+              <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Drinks <span class="badge badge-danger">50% OFF</span></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
+                      <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                    </ul>
+                  </li>
+            </ul>
+            </li>
+              </ul>
+                </li>
+
+                <li class="nav-item style-nav-hor-li">
+                  <a class="nav-link h5" href="./src/pages/TableBook/TableBooking.html">TableBook<sup class="bg-danger text-light">New</sup></a>
+              </li>
+        </ul>
+      </div>
+      <!-- horizontal navbar with collapse end -->
+  
+      <!-- Sign-in Section Start -->
+      <button class="btn text-primary font-weight-bold" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+        Sign-in</button>
+        
+        <div id="id01" class="modallogin">
+  
+          <form class="modal-content animate" action="/action_page.php"  style="background: rgb(50, 156, 255);">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="closelogin" title="Close Modal">&times;</span>
+              <!-- <img src="./assets/icons/user-id.png" alt="Avatar" class="avatar"> -->
+              <h1 class="text-light">Sign-in</h1>
+            </div>
+        
+            <div class="containerlog">
+              <label for="mob"><b>Mobile No</b></label>
+              <input type="text" placeholder="Enter mobile no (ex: +91 1234 567891)" name="uname" id="mob" required>
+        
+              <label for="pwd"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" id="pwd" required>
+              <p id="text">WARNING! Caps lock is ON.</p>
+              <input type="checkbox" onclick="showpassword()">&nbsp;Show Password
+                
+              <button type="submit" id="loginbtn">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+        
+            <div class="container" style="background-color:#f1f1f1">
+              <p class="text-center">
+                  <br>
+               <span>New in This side, <a href="./src/pages/sign-up/register.html"> Register Your self & Sign-up</a></span>
+               <br><br>
+               <span>Forgot <a href="./src/pages/ForgetPassword/ForgetPassword.html">password?</a></span>
+              </p>
+            </div>
+          </form>
+        </div>
+        
+      <!-- Sign-in Section end -->
+
+      <div class="dropdown1">
+        <img src="./assets/icons/blue-shopping-cart-48.png"  class="dropbtn" onclick="onCartClick()" >
+        <span class="badge1">0</span>
+        <div class="container">
+        <div id="myDropdown" class="dropdown1-content">
+          <table class="text-center table table-bordered">
+              <thead>
+                  <tr>
+                    <th>Item No</th>
+                    <th>Item Name</th>
+                    <th>Item Quantati</th>
+                    <th>Item Price (&#x20b9;)</th>
+                    <th>Edit Item</th>
+                  </tr>
+                </thead>
+                <tbody id="myTable"></tbody>
+        </table>
+        <a href="./src/pages/checkout/checkout.html" class="btn btn-outline-success btn-primary text-light">Payment to Contanue
+           &nbsp;&nbsp; &nbsp;&nbsp;  <i class="fa fa-angle-double-right" style="font-size: 10pt"></i>
+        </a>
+        </div>
+      </div>
+      </div>
+      <!-- shopping cart area end -->
+
+      <!-- horizontal secach bar end -->
+      <!-- horizontal menu icon start -->
+      <div class="dropdown">
+        <span class="mr-5 style-menu-icon" onclick="openNav()">&#9776;</span>
+        <div class="dropdown-content-menu-icon">
+          <div class="h6 desc style-hover-menu-icon">Menu</div>
+        </div>
+      </div>
+      <!--  horizontal menu icon end -->
+      <!-- vertical menu bar start -->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="navbar-brand style-foody-color" href="#">
+          <h4 class="style-foody-h1-2">Foody's Menu</h4>
+        </a>
+        <hr class="style-hr">
+        <a href="index.html" class="style-sidenav-a"><img src="./assets/icons/home.png" class="style-menu-item-icon">
+          &nbsp;&nbsp;&nbsp;Home</a>
+        <a href="./src/pages/TableBook/TableBooking.html" class="style-sidenav-a"><img src="./assets/icons/Grill.png" class="style-menu-item-icon">
+          &nbsp;&nbsp;&nbsp;Table Book</a>
+        <a href="./src/pages/services/services.html" class="style-sidenav-a"><img src="./assets/icons/waiter.png" class="style-menu-item-icon">
+          &nbsp;&nbsp;&nbsp;Services</a>
+        <a href="./src/pages/gallery/gallery.html" class="style-sidenav-a"><img src="./assets/icons/gallery.png" class="style-menu-item-icon">
+          &nbsp;&nbsp;&nbsp;Gallery</a>
+        <hr class="style-hr">
+        <a href="./src/pages/AboutUs/Aboutus.html" class="style-sidenav-a"><img src="./assets/icons/about-us.png" class="style-menu-item-icon">
+          &nbsp;&nbsp;&nbsp;About Us</a>
+        <a href="./src/pages/contactus/contact.html" class="style-sidenav-a"><img src="./assets/icons/contact-us.png" class="style-menu-item-icon">
+          &nbsp;&nbsp;&nbsp;Contact Us</a>
+        <a href="./src/pages/MessageUs/MessageUs.html" class="style-sidenav-a"><img src="./assets/icons/message.png" class="style-menu-item-icon">
+          &nbsp;&nbsp;&nbsp;Message Us</a>
+        <hr class="style-hr">
+        <a href="#" class="style-sidenav-a"><img src="./assets/icons/setting.png" class="style-menu-item-icon">
+          &nbsp;&nbsp;&nbsp;Setting</a>
+          <a href="#" class="style-sidenav-a" onclick="document.getElementById('id01').style.display='block'">
+            <img src="./assets/icons/Sign-in.png" class="style-menu-item-icon">
+            &nbsp;&nbsp;&nbsp;Sign-in</a>
+            <br>
+            <span id="output"></span>
+      </div>
+      <!-- vertical menu bar end -->
+    </nav>
+    <!-- nevbar section end -->
+  
+       <!-- Search Bar start -->
+    <div class="container-fluid bg-ligh search-hr-fixer" id="search-bar-off">
+        <div class="container">
+            <div class="input-group">
+                <input type="search" class="form-control dropdown-toggle" placeholder="Search Foods..." 
+                id="searchfilter" aria-label="Text input with segmented dropdown button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <br>
+                <div class="dropdown-menu">
+                <ul class="list-group" id="myList">
+                    <li class="list-group-item"><a class="dropdown-item" href="#section1">Best Offer's</a></li>
+                    <li class="list-group-item"><a class="dropdown-item" href="#section2">Indian Food</a></li>
+                    <li class="list-group-item"><a class="dropdown-item" href="#section3">Chinese Food</a></li>
+                    <li class="list-group-item"><a class="dropdown-item" href="#section4">Fast Food</a></li>
+                    <li class="list-group-item"><a class="dropdown-item" href="#section5">Dessert Sweet</a></li>
+                    <li class="list-group-item"><a class="dropdown-item" href="#section6">Drinks</a></li>
+                </ul>
+                </div> 
+                <div class="input-group-append">
+                  <!-- <button class="btn btn-primary">Search</button> -->
+                  <input class="btn btn-primary" type="submit" value="Search" id="find" onclick="find()">
+                  <button class="btn btn-outline-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#section1">Best Offer's</a>
+                    <a class="dropdown-item" href="#section2">Indian Food</a>
+                    <a class="dropdown-item" href="#section3">Chinese Food</a>
+                    <a class="dropdown-item" href="#section4">Fast Food</a>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#section5">Dessert Sweet</a>
+                    <a class="dropdown-item" href="#section6">Drinks</a>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+       <!-- Search Bar end -->
+
+    <!-- add video start -->
+    <section class="video-ad-mt">
+      <div class="container-fluid mt-md-4 mt-sm-5 mt-5">
+        <button class="btn style-add-btn">Ad</button>
+        <div class="row pb-0">
+          <div class="col-lg-3 col-md-3 col-12 mx-auto style-header-add-video-1">
+            <video class="style-header-add-video" autoplay loop muted>
+              <source src="./assets/videos/PizzaHuts.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="col-lg-3 col-md-3 col-12 mx-auto style-header-add-video-2">
+            <video class="style-header-add-video" autoplay loop muted>
+              <source src="./assets/videos/KFC.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="col-lg-3 col-md-3 col-12 mx-auto style-header-add-video-3">
+            <video class="style-header-add-video" autoplay loop muted>
+              <source src="./assets/videos/McDonald's.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- add video end -->
+  </header>
+  <!-- header section end -->
+  <main>
+    <!-- best offer for you start -->
+    <section id="section1" class="pt-0" style="padding-top:30px;">
+      <div class="container-fluid style-offer-zone">
+        <div class="pt-5 pb-2 style-offer-zone-text">
+          <h1 class="style-offer-h1">Best Offer's For You</h1>
+
+        </div>
+
+           <!-- Timer Coundown start -->
+           <div class="timer-wrap">
+            <i class="time">04:1:2</i>
+            <div class="timer">
+              <span>0</span> : <span>0</span> : <span>0</span>
+            </div>
+          </div>
+          <!-- Timer Coundown end -->
+        <h2 class="pt-3 px-auto pb-5 style-offer-price-off">&#128525; All Item &#x20b9;
+          <span class="style-offer-span-1">20 % Off</span> hurry ! &#128525;</h2>
+       
+        <div>
+          <div class="row style-offer-img-area">
+                    <!-- No 1 -->
+            <div class="col-lg-3 col-md-4 col-12">
+             <img class="card-img-top style-offer-img2 img-zoom" src="./assets/food-img/1.png" alt="Card image">
+              <h6 class="pt-3 text-center style-offer-price">Price &#x20b9; <span class="style-offer-span-1">20 %
+                  Off</span> </h6>
+              <h5 class="pt-1 text-center style-offer-price"><span class="style-offer-span">Price </span>
+                <del class="h4 text-secondary">&#x20b9; 599</del> &#x20b9; 399 </h5>
+                <p class="text-center">
+                    <span class="text-light heading">User Rating</span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star non"></span>
+                    <small class="text-dark text-center details">Details</small>
+                  </p>
+                
+              <button class="btn btn-warning style-offer-btn" data-toggle="modal" data-target="#myModalKFC"
+              onclick="clickToAdd()">
+              Order now</button>
+              <hr class="style-offer-hr">
+            </div>
+                      <!-- No 2 -->
+            <div class="col-lg-3 col-md-4 col-12">
+             <img class="card-img-top style-offer-img img-zoom" src="./assets/food-img/2.png" alt="Card image">
+              <h6 class="pt-3 text-center style-offer-price">Price &#x20b9;<span class="style-offer-span-1"> 20 %
+                  Off</span> </h6>
+              <h5 class="pt-1 text-center style-offer-price"><span class="style-offer-span">Price </span>
+                <del class="h4 text-secondary">&#x20b9; 120</del> &#x20b9; 99 </h5>
+                <p class="text-center">
+                    <span class="text-light heading">User Rating</span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star non"></span>
+                    <small class="text-dark text-center details">Details</small>
+                  </p>
+              <button class="btn btn-warning style-offer-btn" data-toggle="modal" data-target="#myModalBG"
+              onclick="clickToAdd()">
+              Order now</button>
+                       
+              <hr class="style-offer-hr">
+            </div>
+                       <!-- No 4 -->
+            <div class="col-lg-3 col-md-4 col-12  pt-md-0 pt-5">
+              <img class="card-img-top style-offer-img1 img-zoom" src="./assets/food-img/4.png" alt="Card image">
+              <h6 class="pt-3 text-center style-offer-price">Price &#x20b9; <span class="style-offer-span-1">20 %
+                  Off</span> </h6>
+              <h5 class="pt-1 text-center style-offer-price"><span class="style-offer-span">Price </span>
+                <del class="h4 text-secondary">&#x20b9; 40</del> &#x20b9; 20 </h5>
+                <p class="text-center">
+                    <span class="text-light heading">User Rating</span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star non"></span>
+                    <small class="text-dark text-center details">Details</small>
+                  </p>
+              <button class="btn btn-warning style-offer-btn"data-toggle="modal" data-target="#myModalPEP"
+              onclick="clickToAdd()">
+                Order now</button>
+                      
+              <hr class="style-offer-hr">
+            </div>
+
+          </div>
+        </div>
+          <!-- user reatind details start -->
+          <!-- <div class="b">
+              <hr style="border:3px solid #f1f1f1">
+              <div class="row">
+                <div class="side">
+                  <div>5 star</div>
+                </div>
+                <div class="middle">
+                  <div class="bar-container">
+                    <div class="bar-5"></div>
+                  </div>
+                </div>
+                <div class="side right">
+                  <div>150</div>
+                </div>
+                <div class="side">
+                  <div>4 star</div>
+                </div>
+                <div class="middle">
+                  <div class="bar-container">
+                    <div class="bar-4"></div>
+                  </div>
+                </div>
+                <div class="side right">
+                  <div>63</div>
+                </div>
+                <div class="side">
+                  <div class="white">3 star</div>
+                </div>
+                <div class="middle">
+                  <div class="bar-container">
+                    <div class="bar-3"></div>
+                  </div>
+                </div>
+                <div class="side right">
+                  <div class="white">15</div>
+                </div>
+                <div class="side">
+                  <div class="white">2 star</div>
+                </div>
+                <div class="middle">
+                  <div class="bar-container">
+                    <div class="bar-2"></div>
+                  </div>
+                </div>
+                <div class="side right">
+                  <div class="white">6</div>
+                </div>
+                <div class="side">
+                  <div class="white">1 star</div>
+                </div>
+                <div class="middle">
+                  <div class="bar-container">
+                    <div class="bar-1"></div>
+                  </div>
+                </div>
+                <div class="side right">
+                  <div class="white">20</div>
+                </div>
+              </div>-->
+            </div> 
+            <!-- user reatind details end -->
+    </section>
+    <!-- best offer for you end -->
+
+    <!-- Bick Amination area start -->
+    <section class="mt-3 text-center layering">
+      <span class="ani-right">
+        <img src="./assets/icons/bick.png" alt="" class="ani-right-img">
+      </span>
+      <span class="ani-middle">
+
+      </span>
+      <span class="ani-left">
+        <img src="./assets/icons/bick-2.png" alt="" class="ani-left-img">
+      </span>
+    </section>
+    <!-- Bick Amination area end -->
+
+    <!-- Food Order On Call Section Start -->
+    <section class="bg-primary mt-3">
+        <article class="py-5 text-center">
+          <div>
+                 <h2 class="app-text-color-black myfontclass">Foody's</h2>
+                 <p><img src="./assets/icons/sausage-barbeque.png"></p>
+              <h1 class="app-text-color-black">
+                  Give Your Food Order On Phone Call Now !
+              </h1>
+              <!-- <div class="ph-no-shake"> -->
+            <a href="tel:+918981112934" class="display-4 app-ph-no-color">+91 123456789</a>
+          <!-- </div> -->
+            <p>If you want to get best food... Call us now.</p>
+            <button class="btn app-btn-color-1">
+              <a href="tel:+918981112934" class="app-text-color-black">Call Now ...&nbsp;&nbsp;
+                 <span> <i class="fa fa-phone" aria-hidden="true"></i></span>
+              </a>
+            </button>
+          </div>
+        </article>
+      </section>
+    <!-- Food Order On Call Section end -->
+
+    <!-- Indian food start -->
+    <section id="section2" style="padding-top:80px;">
+      <div class="container-fluid">
+        <h1 class="text-center pt-5 myfontclass style-in-food-h1">Indian Food</h1>
+        <hr class="w-25 mx-auto pt-5">
+        <div class="container mb-5">
+          <!-- image slider start -->
+          <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/slider-img/1.jpg" class="style-slider-img">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/slider-img/2.jpg" class="style-slider-img">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/slider-img/3.jpg" class="style-slider-img">
+              </div>
+            </div>
+
+          </div>
+          <!-- image slider end -->
+        </div>
+        <div class="container">
+          <section class="regular slider">
+            <div>
+            <!-- No 1 -->
+            <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                <div class="card box my-2" id="IB">
+                  <h3 class="text-center text-success myfontclass2 myfontsize">Mutton Biryani</h3>
+                  <div class="like">
+                  <img class="card-img-top mx-auto style-in-food-item-img-1 size1" src="./assets/food-img/mutton-biryani.jpg"> <!-- img 1-->
+                  <div class="top-right box2">
+                      <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                    </div>
+                  </div>
+                  <div class="style-in-food-item-price">
+                    <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                    <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                      <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                      <p class="text-center">
+                          <span class="heading">User Rating</span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star non"></span>
+                        </p>
+                    <button id="MuttonBiryani" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                      Order now</button>
+                  </div>
+                </div>
+              <!-- </div> -->
+            </div>
+            <div>
+              <!-- No 2 -->
+              <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                  <div class="card box my-2">
+                    <h3 class="text-center text-success myfontclass2 myfontsize">Egg Roll</h3>
+                    <div class="like">
+                    <img class="card-img-top mx-auto style-in-food-item-img-2 size1" src="./assets/food-img/maxresdefajuult.jpg"> <!-- img 2-->
+                    <div class="top-right box2">
+                        <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                      </div>
+                    </div>
+                    <div class="style-in-food-item-price">
+                      <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                      <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                        <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                        <p class="text-center">
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star non"></span>
+                          </p>
+                      <button id="EggRoll" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                        Order now</button>
+                    </div>
+                  </div>
+                <!-- </div> -->
+            </div>
+            <div>
+              <!-- No 3 -->
+              <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                  <div class="card box my-2">
+                    <h3 class="text-center text-success myfontclass2 myfontsize">Kerela Fish</h3>
+                    <div class="like">
+                    <img class="card-img-top mx-auto style-in-food-item-img-3 size1" src="./assets/food-img/KERELA.FISH.66(1).jpg"> <!-- img 3-->
+                    <div class="top-right box2">
+                        <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                      </div>
+                    </div>
+                    <div class="style-in-food-item-price">
+                      <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                      <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                        <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                        <p class="text-center">
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star non"></span>
+                          </p>
+                      <button id="KerelaFish" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                         Order now</button>
+                    </div>
+                  </div>
+                <!-- </div> -->
+            </div>
+            <div>
+               <!-- No 4 -->
+               <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                  <div class="card box my-2">
+                    <h3 class="text-center text-success myfontclass2 myfontsize">Samosa</h3>
+                    <div class="like">
+                    <img class="card-img-top mx-auto style-in-food-item-img-4 size1" src="./assets/food-img/maxresdefault.jpg"> <!-- img 4-->
+                    <div class="top-right box2">
+                        <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                      </div>
+                    </div>
+                    <div class="style-in-food-item-price">
+                      <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                      <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                        <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                        <p class="text-center">
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star non"></span>
+                          </p>
+                      <button id="Samosa" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                          Order now</button>
+                    </div>
+                  </div>
+                <!-- </div> -->
+            </div>
+            <div>
+             <!-- No 5 -->
+             <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                <div class="card box my-2">
+                  <!-- img 5-->
+                  <h3 class="text-center text-success myfontclass2 myfontsize">Polow Rice</h3>
+                  <div class="like">
+                  <img class="card-img-top mx-auto style-in-food-item-img-5 size1" src="./assets/food-img/barberry-rice-saffron-chicken-su.jpg">
+                  <div class="top-right box2">
+                      <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                    </div>
+                  </div>
+                  <div class="style-in-food-item-price">
+                    <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                    <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                      <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                      <p class="text-center">
+                          <span class="heading">User Rating</span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star non"></span>
+                        </p>
+                    <button id="PolowRice" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                        Order now</button>
+                  </div>
+                </div>
+              <!-- </div> -->
+            </div>
+            <div>
+               <!-- No 6 -->
+                 <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                    <div class="card box my-2">
+                      <h3 class="text-center text-success myfontclass2 myfontsize">Chicken Kasha</h3>
+                      <div class="like">
+                      <img class="card-img-top mx-auto style-in-food-item-img-6 size1" src="./assets/food-img/chicken-kasha-2-640x449.jpg">
+                      <!-- img 6-->
+                      <div class="top-right box2">
+                          <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                        </div>
+                      </div>
+                      <div class="style-in-food-item-price">
+                        <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                        <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                          <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                          <p class="text-center">
+                              <span class="heading">User Rating</span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star non"></span>
+                            </p>
+                        <button id="ChickenKasha" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                            Order now</button>
+                      </div>
+                    </div>
+                <!-- </div> -->
+            </div>
+          </section>
+        </div>
+       
+      </div>
+      <div class="container">
+        <a href="./src/pages/food-type/indian.html" class="btn btn-outline-success btn-primary text-light">more itens</a>
+      </div>
+      <hr>
+    </section>
+    <!-- Indian food end -->
+
+    <!-- chinese food start -->
+    <section id="section3" style="padding-top:80px;">
+      <div class="container-fluid">
+        <h1 class="text-center pt-5 text-danger myfontclass">Chinese Food</h1>
+        <hr class="w-25 mx-auto pt-5">
+        <div class="container-fluid mb-5">
+
+        </div>
+        <div class="container">
+          <section class="regular slider">
+            <div>
+                        <!-- No 1 -->
+                        <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                          <div class="card box my-2">
+                            <h3 class="text-center text-success myfontclass2 myfontsize">Mix Chowmein</h3>
+                            <div class="like">
+                            <img class="card-img-top mx-auto style-in-food-item-img-1 size1" src="./assets/food-img/mixed_nonveg_noodles.jpg">
+                            <!-- img 1-->
+                            <div class="top-right box2">
+                                <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                              </div>
+                            </div>
+                            <div class="style-in-food-item-price">
+                              <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                              <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                                <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                                <p class="text-center">
+                                    <span class="heading">User Rating</span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star non"></span>
+                                  </p>
+                              <button id="MixChowmein" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                                  Order now</button>
+                            </div>
+                          </div>
+                        <!-- </div> -->
+            </div>
+            <div>
+              <!-- No 2 -->
+              <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                <div class="card box my-2">
+                  <h3 class="text-center text-success myfontclass2 myfontsize">Chili Chicken</h3>
+                  <div class="like">
+                  <img class="card-img-top mx-auto style-in-food-item-img-2 size1" src="./assets/food-img/maxresdefault (1).jpg"> <!-- img 2-->
+                  <div class="top-right box2">
+                      <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                    </div>
+                  </div>
+                  <div class="style-in-food-item-price">
+                    <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                    <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                      <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                      <p class="text-center">
+                          <span class="heading">User Rating</span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star non"></span>
+                        </p>
+                    <button id="ChiliChicken" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                        Order now</button>
+                  </div>
+                </div>
+              <!-- </div> -->
+            </div>
+            <div>
+               <!-- No 3 -->
+               <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                <div class="card box my-2">
+                  <h3 class="text-center text-success myfontclass2 myfontsize">Mix Fried Rice</h3>
+                  <div class="like">
+                  <img class="card-img-top mx-auto style-in-food-item-img-3 size1" src="./assets/food-img/Mixed-Fried-Rise-600x534.jpg">
+                  <!-- img 3-->
+                  <div class="top-right box2">
+                      <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                    </div>
+                  </div>
+                  <div class="style-in-food-item-price">
+                    <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                    <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                      <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                      <p class="text-center">
+                          <span class="heading">User Rating</span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star non"></span>
+                        </p>
+                    <button id="MixFriedRice" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                        Order now</button>
+                  </div>
+                </div>
+              <!-- </div> -->
+            </div>
+            <div>
+                <!-- No 4 -->
+                <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                  <div class="card box my-2">
+                    <h3 class="text-center text-success myfontclass2 myfontsize">Chicken Momo</h3>
+                    <div class="like">
+                    <img class="card-img-top mx-auto style-in-food-item-img-4 size1" src="./assets/food-img/chicken-momo-600x480.jpg">
+                    <!-- img 4-->
+                    <div class="top-right box2">
+                        <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                      </div>
+                    </div>
+                    <div class="style-in-food-item-price">
+                      <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                      <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                        <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                        <p class="text-center">
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star non"></span>
+                          </p>
+                      <button id="ChickenMomo" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                          Order now</button>
+                    </div>
+                  </div>
+                <!-- </div> -->
+            </div>
+            <div>
+            <!-- No 5 -->
+            <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+              <div class="card box my-2">
+                <!-- img 5-->
+                <h3 class="text-center text-success myfontclass2 myfontsize">Polow Rice</h3>
+                <div class="like">
+                <img class="card-img-top mx-auto style-in-food-item-img-5 size1" src="./assets/food-img/barberry-rice-saffron-chicken-su.jpg">
+                <div class="top-right box2">
+                    <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                  </div>
+                </div>
+                <div class="style-in-food-item-price">
+                  <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                  <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                    <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                    <p class="text-center">
+                        <span class="heading">User Rating</span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star non"></span>
+                      </p>
+                  <button id="PolowRice2" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                      Order now</button>
+                </div>
+              </div>
+            <!-- </div> -->
+            </div>
+            <div>
+              <!-- No 6 -->
+              <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                <div class="card box my-2">
+                  <h3 class="text-center text-success myfontclass2 myfontsize">Chicken Kasha</h3>
+                  <div class="like">
+                  <img class="card-img-top mx-auto style-in-food-item-img-6 size1" src="./assets/food-img/chicken-kasha-2-640x449.jpg">
+                  <!-- img 6-->
+                  <div class="top-right box2">
+                      <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                    </div>
+                  </div>
+                  <div class="style-in-food-item-price">
+                    <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                    <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                      <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                      <p class="text-center">
+                          <span class="heading">User Rating</span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star non"></span>
+                        </p>
+                    <button id="ChickenKasha2" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                        Order now</button>
+                  </div>
+                </div>
+              <!-- </div> -->
+            </div>
+          </section>
+        </div>
+
+      </div>
+      <div class="container">
+        <a href="./src/pages/food-type/chinese .html" class="btn btn-outline-success btn-primary text-light">more itens</a>
+      </div>
+      <hr>
+    </section>
+    <!-- chinese food end -->
+
+
+     <!-- pepsi section start -->
+     <section>
+      <div class="container-fluid">
+          <button class="btn mt-3 style-add-btn">Ad</button>
+        <div class="pt-5 pb-5 style-offer-zone-text">
+          <div class="style-pepsi-bg">
+            <video class="style-header-add-video" id="myVideo" autoplay loop muted>
+              <source src="./assets/videos/Coca-Cola.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- pepsi section end -->
+
+    <!-- Fast Food Area start -->
+    <section class="mb-5" id="section4" style="padding-top:80px;">
+      <div class="container-fluid">
+        <h1 class="text-center pt-5 myfontclass" style="color: #000;">Fast Food</h1>
+        <hr class="w-25 mx-auto pt-5">
+        <div class="container-fluid mb-5">
+
+        </div>
+        <div class="container">
+          <section class="regular slider">
+            <div>
+                <!-- No 1 -->
+                <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                  <div class="card box my-2">
+                    <h3 class="text-center text-success myfontclass2 myfontsize">Mix Chowmein</h3>
+                    <div class="like">
+                    <img class="card-img-top mx-auto style-in-food-item-img-1 size1" src="./assets/food-img/mixed_nonveg_noodles.jpg">
+                    <!-- img 1-->
+                    <div class="top-right box2">
+                        <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                      </div>
+                    </div>
+                    <div class="style-in-food-item-price">
+                      <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                      <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                        <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                        <p class="text-center">
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star non"></span>
+                          </p>
+                      <button id="MixChowmein" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                          Order now</button>
+                    </div>
+                  </div>
+                <!-- </div> -->
+            </div>
+            <div>
+              <!-- No 2 -->
+              <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                <div class="card box my-2">
+                  <h3 class="text-center text-success myfontclass2 myfontsize">Chili Chicken</h3>
+                  <div class="like">
+                  <img class="card-img-top mx-auto style-in-food-item-img-2 size1" src="./assets/food-img/maxresdefault (1).jpg"> <!-- img 2-->
+                  <div class="top-right box2">
+                      <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                    </div>
+                  </div>
+                  <div class="style-in-food-item-price">
+                    <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                    <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                      <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                      <p class="text-center">
+                          <span class="heading">User Rating</span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star non"></span>
+                        </p>
+                    <button id="ChiliChicken" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                        Order now</button>
+                  </div>
+                </div>
+              <!-- </div> -->
+            </div>
+            <div>
+               <!-- No 3 -->
+               <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                <div class="card box my-2">
+                  <h3 class="text-center text-success myfontclass2 myfontsize">Mix Fried Rice</h3>
+                  <div class="like">
+                  <img class="card-img-top mx-auto style-in-food-item-img-3 size1" src="./assets/food-img/Mixed-Fried-Rise-600x534.jpg">
+                  <!-- img 3-->
+                  <div class="top-right box2">
+                      <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                    </div>
+                  </div>
+                  <div class="style-in-food-item-price">
+                    <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                    <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                      <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                      <p class="text-center">
+                          <span class="heading">User Rating</span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star non"></span>
+                        </p>
+                    <button id="MixFriedRice" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                        Order now</button>
+                  </div>
+                </div>
+              <!-- </div> -->
+            </div>
+            <div>
+                <!-- No 4 -->
+                <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                  <div class="card box my-2">
+                    <h3 class="text-center text-success myfontclass2 myfontsize">Chicken Momo</h3>
+                    <div class="like">
+                    <img class="card-img-top mx-auto style-in-food-item-img-4 size1" src="./assets/food-img/chicken-momo-600x480.jpg">
+                    <!-- img 4-->
+                    <div class="top-right box2">
+                        <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                      </div>
+                    </div>
+                    <div class="style-in-food-item-price">
+                      <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                      <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                        <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                        <p class="text-center">
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star non"></span>
+                          </p>
+                      <button id="ChickenMomo" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                          Order now</button>
+                    </div>
+                  </div>
+                <!-- </div> -->
+            </div>
+            <div>
+            <!-- No 5 -->
+            <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+              <div class="card box my-2">
+                <!-- img 5-->
+                <h3 class="text-center text-success myfontclass2 myfontsize">Polow Rice</h3>
+                <div class="like">
+                <img class="card-img-top mx-auto style-in-food-item-img-5 size1" src="./assets/food-img/barberry-rice-saffron-chicken-su.jpg">
+                <div class="top-right box2">
+                    <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                  </div>
+                </div>
+                <div class="style-in-food-item-price">
+                  <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                  <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                    <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                    <p class="text-center">
+                        <span class="heading">User Rating</span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star non"></span>
+                      </p>
+                  <button id="PolowRice2" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                      Order now</button>
+                </div>
+              </div>
+            <!-- </div> -->
+            </div>
+            <div>
+              <!-- No 6 -->
+              <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                <div class="card box my-2">
+                  <h3 class="text-center text-success myfontclass2 myfontsize">Chicken Kasha</h3>
+                  <div class="like">
+                  <img class="card-img-top mx-auto style-in-food-item-img-6 size1" src="./assets/food-img/chicken-kasha-2-640x449.jpg">
+                  <!-- img 6-->
+                  <div class="top-right box2">
+                      <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                    </div>
+                  </div>
+                  <div class="style-in-food-item-price">
+                    <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                    <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                      <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                      <p class="text-center">
+                          <span class="heading">User Rating</span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star non"></span>
+                        </p>
+                    <button id="ChickenKasha2" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                        Order now</button>
+                  </div>
+                </div>
+              <!-- </div> -->
+            </div>
+          </section>
+        </div>
+
+      </div>
+      <div class="container">
+        <a href="./src/pages/food-type/fastfood.html" class="btn btn-outline-success btn-primary text-light">more itens</a>
+      </div>
+      <hr>
+    </section>
+      <!-- Fast Food Area end -->
+ 
+
+      <!-- Sweet area start -->
+
+      <section class="mb-5" id="section5" style="padding-top:80px;">
+        <div class="container-fluid">
+          <h1 class="text-center pt-5 myfontclass" style="color: rgb(0, 0, 0);">Dessert Sweet</h1>
+          <hr class="w-25 mx-auto pt-5">
+          <div class="container-fluid mb-5">
+  
+          </div>
+          <div class="container">
+            <section class="regular slider">
+              <div>
+                  <!-- No 1 -->
+                  <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                    <div class="card box my-2">
+                      <h3 class="text-center text-success myfontclass2 myfontsize">Mix Chowmein</h3>
+                      <div class="like">
+                      <img class="card-img-top mx-auto style-in-food-item-img-1 size1" src="./assets/food-img/mixed_nonveg_noodles.jpg">
+                      <!-- img 1-->
+                      <div class="top-right box2">
+                          <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                        </div>
+                      </div>
+                      <div class="style-in-food-item-price">
+                        <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                        <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                          <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                          <p class="text-center">
+                              <span class="heading">User Rating</span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star non"></span>
+                            </p>
+                        <button id="MixChowmein" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                            Order now</button>
+                      </div>
+                    </div>
+                  <!-- </div> -->
+              </div>
+              <div>
+                <!-- No 2 -->
+                <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                  <div class="card box my-2">
+                    <h3 class="text-center text-success myfontclass2 myfontsize">Chili Chicken</h3>
+                    <div class="like">
+                    <img class="card-img-top mx-auto style-in-food-item-img-2 size1" src="./assets/food-img/maxresdefault (1).jpg"> <!-- img 2-->
+                    <div class="top-right box2">
+                        <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                      </div>
+                    </div>
+                    <div class="style-in-food-item-price">
+                      <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                      <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                        <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                        <p class="text-center">
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star non"></span>
+                          </p>
+                      <button id="ChiliChicken" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                          Order now</button>
+                    </div>
+                  </div>
+                <!-- </div> -->
+              </div>
+              <div>
+                 <!-- No 3 -->
+                 <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                  <div class="card box my-2">
+                    <h3 class="text-center text-success myfontclass2 myfontsize">Mix Fried Rice</h3>
+                    <div class="like">
+                    <img class="card-img-top mx-auto style-in-food-item-img-3 size1" src="./assets/food-img/Mixed-Fried-Rise-600x534.jpg">
+                    <!-- img 3-->
+                    <div class="top-right box2">
+                        <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                      </div>
+                    </div>
+                    <div class="style-in-food-item-price">
+                      <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                      <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                        <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                        <p class="text-center">
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star non"></span>
+                          </p>
+                      <button id="MixFriedRice" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                          Order now</button>
+                    </div>
+                  </div>
+                <!-- </div> -->
+              </div>
+              <div>
+                  <!-- No 4 -->
+                  <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                    <div class="card box my-2">
+                      <h3 class="text-center text-success myfontclass2 myfontsize">Chicken Momo</h3>
+                      <div class="like">
+                      <img class="card-img-top mx-auto style-in-food-item-img-4 size1" src="./assets/food-img/chicken-momo-600x480.jpg">
+                      <!-- img 4-->
+                      <div class="top-right box2">
+                          <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                      </div>
+                      </div>
+                      <div class="style-in-food-item-price">
+                        <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                        <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                          <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                          <p class="text-center">
+                              <span class="heading">User Rating</span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star non"></span>
+                            </p>
+                        <button id="ChickenMomo" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                            Order now</button>
+                      </div>
+                    </div>
+                  <!-- </div> -->
+              </div>
+              <div>
+              <!-- No 5 -->
+              <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                <div class="card box my-2">
+                  <!-- img 5-->
+                  <h3 class="text-center text-success myfontclass2 myfontsize">Polow Rice</h3>
+                  <div class="like">
+                  <img class="card-img-top mx-auto style-in-food-item-img-5 size1" src="./assets/food-img/barberry-rice-saffron-chicken-su.jpg">
+                  <div class="top-right box2">
+                      <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                    </div>
+                </div>
+                  <div class="style-in-food-item-price">
+                    <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                    <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                      <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                      <p class="text-center">
+                          <span class="heading">User Rating</span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star non"></span>
+                        </p>
+                    <button id="PolowRice2" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                        Order now</button>
+                  </div>
+                </div>
+              <!-- </div> -->
+              </div>
+              <div>
+                <!-- No 6 -->
+                <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                  <div class="card box my-2">
+                    <h3 class="text-center text-success myfontclass2 myfontsize">Chicken Kasha</h3>
+                    <div class="like">
+                    <img class="card-img-top mx-auto style-in-food-item-img-6 size1" src="./assets/food-img/chicken-kasha-2-640x449.jpg">
+                    <!-- img 6-->
+                    <div class="top-right box2">
+                        <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                      </div>
+                    </div>
+                    <div class="style-in-food-item-price">
+                      <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                      <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                        <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                        <p class="text-center">
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star non"></span>
+                          </p>
+                      <button id="ChickenKasha2" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                          Order now</button>
+                    </div>
+                  </div>
+                <!-- </div> -->
+              </div>
+            </section>
+          </div>
+  
+        </div>
+        <div class="container">
+          <a href="./src/pages/food-type/dessert-sweet.html" class="btn btn-outline-success btn-primary text-light">more itens</a>
+        </div>
+        <hr>
+      </section>
+
+      <!-- Sweet area end -->
+
+    <!-- deinks area start -->
+
+    <section class="mb-5" id="section6" style="padding-top:80px;">
+      <div class="container-fluid">
+        <h1 class="text-center pt-5 myfontclass" style="color: rgb(0, 0, 0);">Drinks</h1>
+        <hr class="w-25 mx-auto my-5 style-hr">
+        <div class="container mb-5">
+          <!-- image slider start -->
+          <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/drinks-img/ismixingdrin.jpg" class="style-slider-img">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/drinks-img/carbonated.jpg" class="style-slider-img">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/drinks-img/image.jpg" class="style-slider-img">
+              </div>
+            </div>
+
+          </div>
+          <!-- image slider end -->
+        </div>
+        <div class="container-fluid mb-5">
+
+        </div>
+        <div class="container">
+          <section class="regular slider">
+            <!-- <div class="box"> -->
+                <!-- No 1 -->
+                <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                  <div class="card box my-2">
+                    <h3 class="text-center text-success myfontclass2 myfontsize">Mix Chowmein</h3>
+                    <div class="like">
+                    <img class="card-img-top mx-auto style-in-food-item-img-1 size1" src="./assets/drinks-img/CocktailHero.png">
+                    <!-- img 1-->
+                    <div class="top-right box2">
+                      <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                    </div>
+                  </div>
+                    <div class="style-in-food-item-price">
+                      <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                      <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                        <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                        <p class="text-center">
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star non"></span>
+                          </p>
+                      <button id="MixChowmein" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                          Order now</button>
+                    </div>
+                  </div>
+                <!-- </div> -->
+            <!-- </div> -->
+            <div>
+              <!-- No 2 -->
+              <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                <div class="card box my-2">
+                  <h3 class="text-center text-success myfontclass2 myfontsize">Chili Chicken</h3>
+                  <div class="like">
+                  <img class="card-img-top mx-auto style-in-food-item-img-2 size1" src="./assets/drinks-img/CocktailHero (3).png"> <!-- img 2-->
+                  <div class="top-right box2">
+                    <img src="./assets/icons/love-black.png"  onclick="this.src='./assets/icons/love-red.png', myLike()">
+                  </div>
+                </div>
+                  <div class="style-in-food-item-price">
+                    <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                    <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                      <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                      <p class="text-center">
+                          <span class="heading">User Rating</span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star non"></span>
+                        </p>
+                    <button id="ChiliChicken" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                        Order now</button>
+                  </div>
+                </div>
+              <!-- </div> -->
+            </div>
+            <div>
+               <!-- No 3 -->
+               <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                <div class="card box my-2">
+                  <h3 class="text-center text-success myfontclass2 myfontsize">Mix Fried Rice</h3>
+                  <div class="like">
+                  <img class="card-img-top mx-auto style-in-food-item-img-3 size1" src="./assets/drinks-img/CocktailHero (2).png">
+                  <!-- img 3-->
+                  <div class="top-right box2">
+                    <img src="./assets/icons/love-black.png"  onclick="this.src='./assets/icons/love-red.png', myLike()">
+                  </div>
+                </div>
+                  <div class="style-in-food-item-price">
+                    <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                    <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                      <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                      <p class="text-center">
+                          <span class="heading">User Rating</span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star non"></span>
+                        </p>
+                    <button id="MixFriedRice" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                        Order now</button>
+                  </div>
+                </div>
+              <!-- </div> -->
+            </div>
+            <div>
+                <!-- No 4 -->
+                <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                  <div class="card box my-2">
+                    <h3 class="text-center text-success myfontclass2 myfontsize">Chicken Momo</h3>
+                    <div class="like">
+                    <img class="card-img-top mx-auto style-in-food-item-img-4 size1" src="./assets/drinks-img/CocktailHero (1).png">
+                    <!-- img 4-->
+                    <div class="top-right box2">
+                      <img src="./assets/icons/love-black.png"  onclick="this.src='./assets/icons/love-red.png', myLike()">
+                    </div>
+                  </div>
+                    <div class="style-in-food-item-price">
+                      <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                      <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                        <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                        <p class="text-center">
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star non"></span>
+                          </p>
+                      <button id="ChickenMomo" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                          Order now</button>
+                    </div>
+                  </div>
+                <!-- </div> -->
+            </div>
+            <div>
+            <!-- No 5 -->
+            <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+              <div class="card box my-2">
+                <!-- img 5-->
+                <h3 class="text-center text-success myfontclass2 myfontsize">Polow Rice</h3>
+                <div class="like">
+                <img class="card-img-top mx-auto style-in-food-item-img-5 size1" src="./assets/drinks-img/41545dd8-2853-4009-94c1-e2cc10d2fa7f.jpg">
+                <div class="top-right box2">
+                  <img src="./assets/icons/love-black.png" onclick="this.src='./assets/icons/love-red.png', myLike()">
+                </div>
+              </div>
+                <div class="style-in-food-item-price">
+                  <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                  <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                    <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                    <p class="text-center">
+                        <span class="heading">User Rating</span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star non"></span>
+                      </p>
+                  <button id="PolowRice2" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                      Order now</button>
+                </div>
+              </div>
+            <!-- </div> -->
+            </div>
+            <div>
+              <!-- No 6 -->
+              <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12"> -->
+                <div class="card box my-2">
+                  <h3 class="text-center text-success myfontclass2 myfontsize">Chicken Kasha</h3>
+                  <div class="like">
+                  <img class="card-img-top mx-auto style-in-food-item-img-6 size1" src="./assets/drinks-img/blue-long-island-iced-tea-2-720x720.jpg">
+                  <!-- img 6-->
+                  <div class="top-right box2">
+                    <img src="./assets/icons/love-black.png"  onclick="this.src='./assets/icons/love-red.png', myLike()">
+                  </div>
+                </div>
+                  <div class="style-in-food-item-price">
+                    <h6 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h6>
+                    <h5 class="pt-1 text-center text-success"><span class="">Price </span>
+                      <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h5>
+                      <p class="text-center">
+                          <span class="heading">User Rating</span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star non"></span>
+                        </p>
+                    <button id="ChickenKasha2" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn">
+                        Order now</button>
+                  </div>
+                </div>
+              <!-- </div> -->
+            </div>
+          </section>
+        </div>
+
+      </div>
+      <div class="container">
+        <a href="./src/pages/food-type/drinks.html" class="btn btn-outline-success btn-primary text-light">more itens</a>
+      </div>
+      <hr>
+    </section>
+
+    <!-- deinks area end -->
+
+    <!-- our food partner section start -->
+    <section class="mb-5">
+        <hr>
+     <div class="container" style="background: #fff">
+         <h1 class="text-center mt-5">Our Food Partner</h1>
+         <hr class="w-25 mx-auto pt-5">
+        <div id="mixedSlider">
+            <div class="MS-content">
+                <div class="item">
+                    <div class="imgTitle" style="width: 150px; height:150px">
+                       <img src="./assets/food-patner-img/Wow!_momo_logo.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="imgTitle" style="width: 150px; height:150px">
+                      <img src="./assets/food-patner-img/kfc-logo.png" alt="" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="imgTitle" style="width: 150px; height:150px">
+                        <img src="./assets/food-patner-img/pizza-hut-png-logo.png" alt="" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="imgTitle" style="width: 150px; height:100px">
+                        <img src="./assets/food-patner-img/dominose-icon.png" alt="" style="width: 150px; height:100px"/>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="imgTitle" style="width: 150px; height:100px">
+                        <img src="./assets/food-patner-img/mcdonalds.png" alt="" style="width: 150px; height:100px"/>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="imgTitle" style="width: 150px; height:150px">
+                        <img src="./assets/food-patner-img/pepsi-h.png" alt="" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="imgTitle" style="width: 150px; height:150px">
+                        <img src="./assets/food-patner-img/subway-logo.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="imgTitle" style="width: 150px; height:150px">
+                        <img src="./assets/food-patner-img/CafeCoffeeDay.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="imgTitle" style="width: 150px; height:150px">
+                        <img src="./assets/food-patner-img/Zomato-flat-logo.png" alt="" style="width: 150px; height:100px"/>
+                    </div>
+                </div>
+               
+            </div>
+          
+        </div>
+
+     </div>
+     <hr>
+    </section>
+    <!-- our food partner section end -->
+
+    <!-- our comitment start -->
+    <section class="mb-5">
+      <div class="container" style="background: #fff">
+         <div class="row" style="color: #838383">
+           <div class="col-3 text-center my-5"> 
+             <img src="./assets/icons/heart.png" alt="">
+            <p>24x7 Help</p>
+            <small>Have a query and need help? <a href="#">Click here.</a></small>
+           </div>
+           <div class="col-3 text-center my-5">
+              <img src="./assets/icons/trust.png" alt="">
+            <p>Foody's Trust</p>
+            <small>Your money is yours! All refunds come with no question asked guarantee.
+            </small>
+           </div>
+           <div class="col-3 text-center my-5">
+              <img src="./assets/icons/assurance.png" alt="">
+              <p>100% Assurance</p>
+              <small>At Foody's, we provide 100% assurance. 
+                If you have any issue, your money is immediately refunded. 
+                Sit back and enjoy your shopping.</small>
+           </div>
+           <div class="col-3 text-center my-5">
+              <img src="./assets/icons/promice.png" alt="">
+            <p>Our Promise</p>
+            <small>Happiness is guaranteed at Foody's. 
+              If we fall short of your expectations, give us a shout.</small>
+           </div>
+         </div>
+      </div>
+    </section>
+    <!-- our comitment end -->
+
+    <!-- map or location area start -->
+     <div class="container mb-5">
+       <div class="map-area">
+          <div class="mapouter">
+            <div class="gmap_canvas">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7373.180408922428!2d88.3083464265026!3d22.482028854376203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027a660793c5f9%3A0x9bd96edf90d63f27!2sSakher+Bazar%2C+Paschim+Barisha%2C+Kolkata%2C+West+Bengal+700008!5e0!3m2!1sen!2sin!4v1563958672536!5m2!1sen!2sin" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+       </div>
+       </div>
+      </div>
+       <div class="container-fluid mx-auto map-area-mobile">
+          <div class="mapouter">
+            <div class="gmap_canvas">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7373.180408922428!2d88.3083464265026!3d22.482028854376203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027a660793c5f9%3A0x9bd96edf90d63f27!2sSakher+Bazar%2C+Paschim+Barisha%2C+Kolkata%2C+West+Bengal+700008!5e0!3m2!1sen!2sin!4v1563958672536!5m2!1sen!2sin" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+       </div>
+     </div>
+     </div>
+     </div>
+     
+     <!-- map or location area end -->
+
+     <!-- message area start -->
+     <img
+     src="./assets/icons/chat.png"
+     alt="Message Me image"
+     title="Send Me A Message"
+     id="chat"
+     class="img-fluid open-button" onclick="openForm()"
+ />
+ <div class="chat-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h1>Chat</h1>
+  
+      <label for="msg"><b>Message</b></label>
+      <textarea placeholder="Type message.." name="msg" required></textarea>
+  
+      <button type="submit" class="btn">Send</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+     <!-- message area end -->
+    
+    <button type="button" class="btn btn-primary btn-lg btn-block font-weight-bold" data-toggle="tooltip"
+      data-placement="top" title="Click The Button And Go To Top Of The Page" onclick="topFunction()">
+      Back to top ....</button>
+  </main>
+  <!-- footer area start -->
+  <footer class="footer_style">
+      <main class="container-fluid">
+       <div class="row p-3">
+        <div class="col-md-4 col-12 offset-md-1"> 
+         <p class="mt-5 text-justify"> Lorem ipsum dolor sit amet, 
+           consectetur adipisicing elit. Impedit vitae ex itaque 
+           ut ad! Saepe officiis dolorum tempore nostrum ducimus 
+           accusantium doloremque ullam, quos consectetur quae temporibus, incidunt soluta minus. 
+          </p>
+        </div>
+      
+        <div class="col-md-4 col-12">
+          <h4>Contacts</h4>
+                    <dl>
+                      <dt>Address:</dt>
+                      <dd>Kolkata, West Bengal </dd>
+                    </dl>
+                    <dl>
+                      <dt>email:</dt>
+                      <dd><a href="mailto:sayan.c.development@gmail.com" >sayan.c.development@gmail.com</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>phones:</dt>
+                      <dd>
+                        <a href="tel:+919051853934">+91 033-1234-5678</a>
+                        &nbsp;&nbsp;
+                        <span>or</span>
+                        &nbsp;&nbsp;
+                        <a href="tel:+919051853934">+91 9051853934</a>
+                      </dd>
+                    </dl>
+        </div>
+      
+        <div class="col-md-2 col-12">
+         <h4>Links</h4>
+                    <ul>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">Portfolio</a></li>
+                      <li><a href="#">Blog</a></li>
+                      <li><a href="#">Contacts</a></li>
+                      <li><a href="#">About</a></li>
+                    </ul>
+        </div>
+       </div>
+      
+       <div class="d-flex flex-row justify-content-center align-items-center flex-wrap">
+         <div class="p-md-5 p-2 flex-fill ">
+         <a href="https://www.facebook.com" target="_blank"> <i class="fa fa-facebook-official" aria-hidden="true"></i> <span>Facebook</span> </a> </div>
+      
+         <div class="p-md-5 p-2 flex-fill ">
+           <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a></div>
+      
+         <div class="p-md-5 p-2 flex-fill ">
+           <a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a></div>
+      
+         <div class="p-md-5 p-2 flex-fill ">
+           <a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i><span>Youtube</span></a></div>
+        
+       </div>
+      </main>
+      <section class="bg-dark">
+          <p class="text-center text-white">all right of foody.com &copy; copyright sayanchakroborty.com 2019</p>
+        </section>
+      </footer>
+      <nav class="navbar fixed-bottom navbar-expand-lg style-nav buttom-nav-main">
+          <div class="mx-auto buttom-nav justify-content-around">
+         <a href="#">
+            <img src="./assets/icons/location.png" alt="Home" title="location"/>
+          </a>
+         <a href="#">
+            <img src="./assets/icons/date&time.png" alt="Home" title="location"/>
+          </a>
+         <a href="#">
+            <img src="./assets/icons/food-menu.png" alt="Home" title="location"/>
+          </a>
+               
+          <a href="#">
+           <img src="./assets/icons/table-booking.png" alt="Home" title="location"/>
+          </a>
+                
+          </div>
+      </nav>
+  <!-- footer area end -->
+  <div id="likemessage">"You Like This Food" Thank You :)</div>
+  <div id="snackbar">This Food Now in the CART..</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="./src/js/style.js"></script>
+  <script src="./src/js/multislider.min.js"></script>
+  <script src="./src/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+
+  <!-- to get clint os name start -->
+  <script>
+  var OSName="Unknown OS";
+if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+
+document.write('Your OS: '+OSName);
+  
+  </script>
+  <!-- to get clint os name end -->
+
+
+  <!-- for deseble right click start-->
+  <!-- <script>
+    $(document).ready(function(){
+         $(document).bind("contextmenu",function(e){
+            return false;
+        });
+    });
+    </script> -->
+    <!-- for deseble right click end -->
+
+    <!-- ctrl+u ctrl-c off start -->
+<!-- <script>
+  document.onkeydown = function(e) {
+          if (e.ctrlKey && 
+              (e.keyCode === 67 || 
+               e.keyCode === 86 || 
+               e.keyCode === 85 || 
+               e.keyCode === 117)) {
+              return false;
+          } else {
+              return true;
+          }
+  };
+  $(document).keypress("u",function(e) {
+    if(e.ctrlKey)
+    {
+  return false;
+  }
+  else
+  {
+  return true;
+  }
+  });
+  </script> -->
+  <!-- ctrl+u ctrl-c off end -->
+  <script>
+    $(function () {
+      $('#goTop').goTop();
+    });
+
+    $('#basicSlider').multislider({
+          continuous: true,
+          duration: 6000
+        });
+        $('#mixedSlider').multislider({
+          duration: 750,
+          interval: 3000
+        });
+    </script>
+    </body>
+    <script type="text/javascript">
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36251023-1']);
+      _gaq.push(['_setDomainName', 'jqueryscript.net']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+      // indian item multi slider
+
+$('.regular').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  dots: true,
+  speed: 300,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+    </script>
+<!-- open filter start -->
+<script>
+  function openfilter() {
+    document.getElementById("myfilter").style.width = "250px";
+  }
+  
+  function closefilter() {
+    document.getElementById("myfilter").style.width = "0";
+  }
+  </script>
+<!-- open filter end -->
+
+</body>
+</html>

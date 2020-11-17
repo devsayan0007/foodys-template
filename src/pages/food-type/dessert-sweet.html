@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="desktop favicon icon" href="../../../assets/icons/bick-2.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Indian Dessert & Sweet</title>
+</head>
+
+<body>
+  <!-- header section start -->
+  <header>
+    
+    <!-- navbar section start -->
+    <nav class="navbar navbar-expand-lg style-nav">
+      <div class="dropdown">
+        <a class="navbar-brand style-foody-color" href="../../../index.html">
+          <span class="h2 style-foody-h1">Foody's</span>
+        </a>
+
+        <div class="dropdown-content">
+          <div class="h6 desc">Foody's Restaurant</div>
+          <div id="info">
+            <p>
+              All Kind Of Bengali, Chinnies, Beriany
+              Food
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- horizontal navbar with collapse  start -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+                <li class="nav-item style-nav-hor-li">
+                        <a class="nav-link h5" href="../../../index.html">Home</a>
+                </li>        
+                
+                <li class="nav-item style-nav-hor-li">
+                    <a class="nav-link h5" href="../gallery/gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item style-nav-hor-li">
+                    <a class="nav-link h5" href="../services/services.html">Services</a>
+                </li>
+        </ul>
+      </div>
+      <!-- horizontal navbar with collapse end -->
+  
+      <!-- Sign-in Section Start -->
+      <button class="btn text-primary font-weight-bold" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+        Sign-in</button>
+        
+        <div id="id01" class="modallogin">
+  
+          <form class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="closelogin" title="Close Modal">&times;</span>
+              <!-- <img src="./assets/icons/user-id.png" alt="Avatar" class="avatar"> -->
+              <h1>Sign-in</h1>
+            </div>
+        
+            <div class="containerlog">
+              <label for="mob"><b>Mobile No</b></label>
+              <input type="text" placeholder="Enter mobile no (ex: +91 1234 567891)" name="uname" id="mob" required>
+        
+              <label for="pwd"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" id="pwd" required>
+              <p id="text">WARNING! Caps lock is ON.</p>
+              <input type="checkbox" onclick="showpassword()">&nbsp;Show Password
+                
+              <button type="submit" id="loginbtn">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+        
+            <div class="container" style="background-color:#f1f1f1">
+              <p class="text-center">
+                  <br>
+               <span>New in This side, <a href="../sign-up/register.html"> Register Your self & Sign-up</a></span>
+               <br><br>
+               <span>Forgot <a href="../ForgetPassword/ForgetPassword.html">password?</a></span>
+              </p>
+              
+              <!-- <br><br> -->
+              <!-- <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> -->
+            </div>
+          </form>
+        </div>
+        
+      <!-- Sign-in Section end -->
+
+      <!-- shopping cart area start -->
+      <!-- <div class="dropdown">
+        <img src="./assets/icons/blue-shopping-cart-48.png" data-toggle="dropdown">
+        <div class="dropdown-content-menu-icon">
+          <div class="h6 desc style-hover-menu-icon">Shopping Cart</div>
+        </div>
+        <div class="dropdown-menu list-item-div">
+          <span>Your Items</span>
+          <ol>
+          
+          </ol>
+          </div>
+      </div> -->
+      <div class="dropdown1">
+        <img src="../../../assets/icons/blue-shopping-cart-48.png"  class="dropbtn" onclick="onCartClick()" >
+        <div id="myDropdown" class="dropdown1-content">
+          <!-- <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a> -->
+          <table class="table table-bordered">
+              <thead>
+                  <tr>
+                    <th>Item No</th>
+                    <th>Item Name</th>
+                    <th>Item Quantati</th>
+                    <th>Item Price (&#x20b9;)</th>
+                    <th>Edit Item</th>
+                  </tr>
+                </thead>
+                <tbody id="myTable">
+                   <ol>
+                     
+                   </ol>
+                  </tbody>
+        </table>
+        </div>
+      </div>
+      <!-- shopping cart area end -->
+
+      <!-- horizontal secach bar end -->
+      <!-- horizontal menu icon start -->
+      <div class="dropdown">
+        <span class="mr-5 style-menu-icon" onclick="openNav()">&#9776;</span>
+        <div class="dropdown-content-menu-icon">
+          <div class="h6 desc style-hover-menu-icon">Menu</div>
+        </div>
+      </div>
+      <!--  horizontal menu icon end -->
+      <!-- vertical menu bar start -->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="navbar-brand style-foody-color" href="../../../index.html">
+          <h1 class="style-foody-h1">Foody's</h1>
+        </a>
+        <hr class="style-hr">
+        <a href="../../../index.html" class="style-sidenav-a"><img src="../../../assets/icons/home.png" class="style-menu-item-icon">
+          &nbsp;&nbsp;&nbsp;Home</a>
+          <a href="../TableBook/TableBooking.html" class="style-sidenav-a"><img src="../../../assets/icons/Grill.png" class="style-menu-item-icon">
+            &nbsp;&nbsp;&nbsp;Sit Booking</a>
+        <a href="../services/services.html" class="style-sidenav-a"><img src="../../../assets/icons/waiter.png" class="style-menu-item-icon">
+          &nbsp;&nbsp;&nbsp;Services</a>
+        <a href="../gallery/gallery.html" class="style-sidenav-a"><img src="../../../assets/icons/gallery.png" class="style-menu-item-icon">
+          &nbsp;&nbsp;&nbsp;Gallery</a>
+        <hr class="style-hr">
+        <a href="../AboutUs/Aboutus.html" class="style-sidenav-a"><img src="../../../assets/icons/about-us.png" class="style-menu-item-icon">
+          &nbsp;&nbsp;&nbsp;About Us</a>
+        <a href="../contactus/contact.html" class="style-sidenav-a"><img src="../../../assets/icons/contact-us.png" class="style-menu-item-icon">
+          &nbsp;&nbsp;&nbsp;Contact Us</a>
+        <a href="#" class="style-sidenav-a"><img src="../../../assets/icons/message.png" class="style-menu-item-icon">
+          &nbsp;&nbsp;&nbsp;Message Us</a>
+        <hr class="style-hr">
+        <a href="#" class="style-sidenav-a"><img src="../../../assets/icons/setting.png" class="style-menu-item-icon">
+          &nbsp;&nbsp;&nbsp;Setting</a>
+          <a href="#" class="style-sidenav-a" onclick="document.getElementById('id01').style.display='block'">
+            <img src="../../../assets/icons/Sign-in.png" class="style-menu-item-icon">
+            &nbsp;&nbsp;&nbsp;Sign-in</a>
+            <br>
+            <span id="output"></span>
+      </div>
+      <!-- vertical menu bar end -->
+    </nav>
+    <!-- nevbar section end -->
+    </header>
+    <a href="../../../index.html?#section5" class="btn btn-primary text-light"><i style="font-size:16pt" class="fa">&#xf100;</i>
+      &nbsp;&nbsp; Previous</a>
+    <main>
+            <section class="my-5">
+              <div class="container-fluid">
+                  <div class="container mb-5">
+                      <div class="jumbotron">
+                        <h2 class="text-center">Dessert Sweet</h2>
+                      </div>
+                    </div>
+              <div class="row mb-5">
+                <!-- No 1 -->
+                <div class="col-lg-2 col-md-3 col-sm-2 col-12">
+                  <div class="card" id="IB">
+                    <h3 class="text-center text-success myfontclass2 myfontsize">Mutton Biryani</h3>
+                    <img class="card-img-top style-in-food-item-img-1" src="../../../assets/food-img/mutton-biryani.jpg"> <!-- img 1-->
+                    <div class="style-in-food-item-price">
+                      <h5 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h5>
+                      <h3 class="pt-1 text-center text-success"><span class="">Price </span>
+                        <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h3>
+                        <p class="text-center">
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                          </p>
+                      <button id="MuttonBiryani" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn" data-toggle="modal" data-target="#myModalMB">
+                        Add To Oder List</button>
+                                     <!-- The Modal -->
+        <div class="modal fade" id="myModalMB">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+              
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Sign-in</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="/action_page.php" autocomplete="off">
+                      <div class="form-group">
+                          <label for="mob">Mobile No:</label>
+                          <input type="tel" class="form-control" placeholder="Enter mobile no" id="mob">
+                      </div>
+                      <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                        <input type="checkbox" onclick="showpassword()">Show Password
+                      </div>
+                      <div class="form-group form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox"> Remember me
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <!-- Modal Close -->
+                    </div>
+                  </div>
+                </div>
+                   <!-- No 2 -->
+                <div class="col-lg-2 col-md-3 col-sm-2 col-12 mx-auto">
+                  <div class="card">
+                    <h3 class="text-center text-success myfontclass2 myfontsize">Egg Roll</h3>
+                    <img class="card-img-top style-in-food-item-img-2" src="../../../assets/food-img/maxresdefajuult.jpg"> <!-- img 2-->
+                    <div class="style-in-food-item-price">
+                      <h5 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h5>
+                      <h3 class="pt-1 text-center text-success"><span class="">Price </span>
+                        <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h3>
+                        <p class="text-center">
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                          </p>
+                      <button id="EggRoll" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn" data-toggle="modal" data-target="#myModalER">
+                        Add To Oder List</button>
+                       <!-- The Modal -->
+        <div class="modal fade" id="myModalER">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+              
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Sign-in</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="/action_page.php" autocomplete="off">
+                      <div class="form-group">
+                          <label for="mob">Mobile No:</label>
+                          <input type="tel" class="form-control" placeholder="Enter mobile no" id="mob">
+                      </div>
+                      <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                        <input type="checkbox" onclick="showpassword()">Show Password
+                      </div>
+                      <div class="form-group form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox"> Remember me
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <!-- Modal Close -->
+                    </div>
+                  </div>
+                </div>
+                   <!-- No 3 -->
+                <div class="col-lg-2 col-md-3 col-sm-2 col-12 mx-auto">
+                  <div class="card">
+                    <h3 class="text-center text-success myfontclass2 myfontsize">Kerela Fish</h3>
+                    <img class="card-img-top style-in-food-item-img-3" src="../../../assets/food-img/KERELA.FISH.66(1).jpg"> <!-- img 3-->
+                    <div class="style-in-food-item-price">
+                      <h5 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h5>
+                      <h3 class="pt-1 text-center text-success"><span class="">Price </span>
+                        <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h3>
+                        <p class="text-center">
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                          </p>
+                      <button id="KerelaFish" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn" data-toggle="modal" data-target="#myModalKF">
+                        Add To Oder List</button>
+                       <!-- The Modal -->
+        <div class="modal fade" id="myModalKF">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+              
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Sign-in</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="/action_page.php" autocomplete="off">
+                      <div class="form-group">
+                          <label for="mob">Mobile No:</label>
+                          <input type="tel" class="form-control" placeholder="Enter mobile no" id="mob">
+                      </div>
+                      <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                        <input type="checkbox" onclick="showpassword()">Show Password
+                      </div>
+                      <div class="form-group form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox"> Remember me
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <!-- Modal Close -->
+                    </div>
+                  </div>
+                </div>
+                  <!-- No 4 -->
+                <div class="col-lg-2 col-md-3 col-sm-2 col-12 mx-auto">
+                  <div class="card">
+                    <h3 class="text-center text-success myfontclass2 myfontsize">Samosa</h3>
+                    <img class="card-img-top style-in-food-item-img-4" src="../../../assets/food-img/maxresdefault.jpg"> <!-- img 4-->
+                    <div class="style-in-food-item-price">
+                      <h5 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h5>
+                      <h3 class="pt-1 text-center text-success"><span class="">Price </span>
+                        <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h3>
+                        <p class="text-center">
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                          </p>
+                      <button id="Samosa" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn" data-toggle="modal" data-target="#myModalSA">
+                        Add To Oder List</button>
+                       <!-- The Modal -->
+        <div class="modal fade" id="myModalSA">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+              
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Sign-in</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="/action_page.php" autocomplete="off">
+                      <div class="form-group">
+                          <label for="mob">Mobile No:</label>
+                          <input type="tel" class="form-control" placeholder="Enter mobile no" id="mob">
+                      </div>
+                      <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                        <input type="checkbox" onclick="showpassword()">Show Password
+                      </div>
+                      <div class="form-group form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox"> Remember me
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <!-- Modal Close -->
+                    </div>
+                  </div>
+                </div>
+                    <!-- No 5 -->
+                <div class="col-lg-2 col-md-3 col-sm-2 col-12 ml-auto">
+                  <div class="card">
+                    <!-- img 5-->
+                    <h3 class="text-center text-success myfontclass2 myfontsize">Polow Rice</h3>
+                    <img class="card-img-top style-in-food-item-img-5" src="../../../assets/food-img/barberry-rice-saffron-chicken-su.jpg">
+                    <div class="style-in-food-item-price">
+                      <h5 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h5>
+                      <h3 class="pt-1 text-center text-success"><span class="">Price </span>
+                        <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h3>
+                        <p class="text-center">
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                          </p>
+                      <button id="PolowRice" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn" data-toggle="modal" data-target="#myModalPR">
+                        Add To Oder List</button>
+                       <!-- The Modal -->
+        <div class="modal fade" id="myModalPR">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+              
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Sign-in</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="/action_page.php" autocomplete="off">
+                      <div class="form-group">
+                        <label for="mob">Mobile No:</label>
+                        <input type="tel" class="form-control" placeholder="Enter mobile no" id="mob">
+                      </div>
+                      <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                        <input type="checkbox" onclick="showpassword()">Show Password
+                      </div>
+                      <div class="form-group form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox"> Remember me
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <!-- Modal Close -->
+                    </div>
+                  </div>
+                </div>
+                     <!-- No 6 -->
+                <!-- <div class="col-lg-2 col-md-3 col-sm-2 col-12">
+                  <div class="card">
+                    <h3 class="text-center text-success myfontclass2 myfontsize">Chicken Kasha</h3>
+                    <img class="card-img-top style-in-food-item-img-6" src="./assets/food-img/chicken-kasha-2-640x449.jpg"> -->
+                    <!-- img 6-->
+                    <!-- <div class="style-in-food-item-price">
+                      <h5 class="pt-3 text-center">Price &#x20b9; <span class="text-danger">20 % Off</span> </h5>
+                      <h3 class="pt-1 text-center text-success"><span class="">Price </span>
+                        <del class="h4 text-secondary">&#x20b9; 69</del> &#x20b9; 49 </h3>
+                        <p class="text-center">
+                            <span class="heading">User Rating</span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                          </p>
+                      <button id="ChickenKasha" onclick="clickToAdd()" class="btn btn-warning style-in-food-btn" data-toggle="modal" data-target="#myModalCK">Add To Oder List</button> -->
+                       <!-- The Modal -->
+        <!-- <div class="modal fade" id="myModalCK">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content"> -->
+              
+                <!-- Modal Header -->
+                <!-- <div class="modal-header">
+                  <h4 class="modal-title">Sign-in</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div> -->
+                
+                <!-- Modal body -->
+                <!-- <div class="modal-body">
+                    <form action="/action_page.php" autocomplete="off">
+                      <div class="form-group">
+                        <label for="mob">Mobile No:</label>
+                        <input type="tel" class="form-control" placeholder="Enter mobile no" id="mob">
+                      </div>
+                      <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                        <input type="checkbox" onclick="showpassword()">Show Password
+                      </div>
+                      <div class="form-group form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox"> Remember me
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                 -->
+                <!-- Modal footer -->
+                <!-- <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+                
+              </div>
+            </div>
+          </div> -->
+          <!-- Modal Close -->
+                    <!-- </div>
+                  </div>
+                </div>
+              </div>     -->
+
+
+            </div>    
+            </section>
+    </main>
+
+        <!-- footer area start -->
+  <footer class="footer_style">
+        <main class="container-fluid">
+         <div class="row p-3">
+          <div class="col-md-4 col-12 offset-md-1"> 
+           <p class="mt-5 text-justify"> Lorem ipsum dolor sit amet, 
+             consectetur adipisicing elit. Impedit vitae ex itaque 
+             ut ad! Saepe officiis dolorum tempore nostrum ducimus 
+             accusantium doloremque ullam, quos consectetur quae temporibus, incidunt soluta minus. 
+            </p>
+          </div>
+        
+          <div class="col-md-4 col-12">
+            <h4>Contacts</h4>
+                      <dl>
+                        <dt>Address:</dt>
+                        <dd>Kolkata, West Bengal </dd>
+                      </dl>
+                      <dl>
+                        <dt>email:</dt>
+                        <dd><a href="mailto:sayan.c.development@gmail.com" >sayan.c.development@gmail.com</a></dd>
+                      </dl>
+                      <dl>
+                        <dt>phones:</dt>
+                        <dd>
+                          <a href="tel:+919051853934">+91 033-1234-5678</a>
+                          &nbsp;&nbsp;
+                          <span>or</span>
+                          &nbsp;&nbsp;
+                          <a href="tel:+919051853934">+91 9051853934</a>
+                        </dd>
+                      </dl>
+          </div>
+        
+          <div class="col-md-2 col-12">
+           <h4>Links</h4>
+                      <ul>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">About</a></li>
+                      </ul>
+          </div>
+         </div>
+        
+         <div class="d-flex flex-row justify-content-center align-items-center flex-wrap">
+           <div class="p-md-5 p-2 flex-fill ">
+           <a href="https://www.facebook.com" target="_blank"> <i class="fa fa-facebook-official" aria-hidden="true"></i> <span>Facebook</span> </a> </div>
+        
+           <div class="p-md-5 p-2 flex-fill ">
+             <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a></div>
+        
+           <div class="p-md-5 p-2 flex-fill ">
+             <a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a></div>
+        
+           <div class="p-md-5 p-2 flex-fill ">
+             <a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i><span>Youtube</span></a></div>
+          
+         </div>
+        </main>
+        <section class="bg-dark">
+            <p class="text-center text-white">all right of foody.com &copy; copyright sayanchakroborty.com 2019</p>
+          </section>
+        </footer>
+    <!-- footer area end -->
+<script src="../../js/style.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>

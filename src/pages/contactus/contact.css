@@ -1,0 +1,20 @@
+/* map area start */
+.map-area-mobile{
+    display: none;
+  }
+  .mapouter{position:relative;text-align:right;height:409px;width:1080px;}
+  .gmap_canvas {overflow:hidden;background:none!important;height:409px;width:1080px;}
+  /* map area end */
+
+  @media(max-width:768px){
+  
+/* map area for mobile start */
+.map-area{display: none;}
+.map-area-mobile{
+  display: block;
+}
+.mapouter{position:relative;text-align:right;height:409px;width:367px;}
+.gmap_canvas {overflow:hidden;background:none!important;height:409px;width:367px;}
+/* map area for mobile end */
+
+}

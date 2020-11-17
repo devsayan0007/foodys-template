@@ -1,0 +1,1121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* browser scroll bar customize start */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    /* display:none; */
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #9de0a8; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #00b9f5; 
+    /* background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%); */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff4800; 
+  }
+/* browser scroll bar customize end */
+
+/* web font area start */
+@font-face {
+    font-family: segoe-ui;
+    src: url(../fonts/Katrine.ttf);
+  }
+@font-face {
+    font-family: hotpizza;
+    src: url(../fonts/hotpizza.ttf);
+    /* src: url(../fonts/STOREB__.TTF); */
+  }
+  @import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Merriweather:700&display=swap');
+
+  .myfontclass{font-family: segoe-ui !important;}
+  .myfontclass1{font-family: hotpizza !important;}
+  .myfontclass2{font-family: 'Roboto', sans-serif;}
+  .myfontclass3{font-family: 'Merriweather', serif;}
+/* web font area end */
+
+  a{text-decoration: none !important;}
+  /* header{
+      background-color: #000 !important;
+  } */
+   
+  /* Cart list item div start */
+  .list-item-div{
+   z-index: 100;
+  }
+.list-item-div-2{
+  width: 100%;
+  background-color: #fff;
+}
+/* Cart list item div end */
+#g2t{
+  font-size: 8pt;
+}
+#g2t img{
+  width: 20px;
+}
+
+#ssb2 img{
+  width: 13px;
+}
+  /* user reatind view start */
+  .checked{color: orange; font-size: 10px;}
+  .non { font-size: 10px;}
+  .heading {font-size: 14px;margin-right: 25px;}
+  .details{cursor: default;}
+  
+  /* user reatind view end */
+ 
+  /* user reatind details start */
+  .white{color: #000 !important}
+     .b{
+       z-index: 9999 !important;
+       font-family: Arial !important;
+       margin: 0 auto; /*Center website */
+       max-width: 800px; /* Max width */
+       padding: 20px;
+       /* background-color: #fff !important; */
+       color: #fff;
+       display:none;
+     }
+    
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+
+  /* user reatind details end */
+
+/* Back to top area start */
+#back-to-top-1{
+  display: none;
+}
+#back-to-top-1 button{
+  position: fixed;
+  z-index: 3 !important;
+  box-shadow: 1px 1px 6px 1px rgb(20, 20, 20);
+}
+
+/* Back to top area end */
+
+  /* preloader start*/
+  #loading{
+    position: fixed !important;
+    background: #fff !important;
+    width: 100%;
+    height: 100vh;
+    margin: -45px 0 0 0 !important;
+    z-index: 99 !important;
+  }
+  #loading-center{
+      position: fixed;
+      top: 35vh;
+      left: 20vw;
+      /* right: auto; */
+  }
+  .buttonload {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 24px; /* Some padding */
+    font-size: 16px; /* Set a font-size */
+  }
+  /* Add a right margin to each icon */
+  .fa {
+    margin-left: -12px;
+    margin-right: 8px;
+  }
+  /* preloader end*/
+
+  .dropdown-submenu {
+    position: relative;
+  }
+  
+  .dropdown-submenu a::after {
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 6px;
+    top: .8em;
+  }
+  
+  .dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: .1rem;
+    margin-right: .1rem;
+  }
+
+
+  /* Bick Amination area start */
+  .layering{z-index: -999 !important;}
+  .ani-left-img{
+    animation: bickMoveLeft 9s infinite;
+    position:relative;
+  }
+  .ani-right-img{
+    animation: bickMoveRight 9s infinite;
+    position:relative;
+  }
+  @keyframes bickMoveLeft {
+    from {left: 0%;}
+    to {left: 40%;}
+  }
+  @keyframes bickMoveRight {
+    from {right: 0%;}
+    to {right: 40%;}
+  }
+  /* Bick Amination area end */
+
+  /* shopping cart section area start */
+
+  .dropbtn {
+    border: none;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+  }
+  
+  .dropdown1 {
+    position: relative;
+    display: inline-block;
+    padding-left: 2% !important;
+  }
+  
+  .dropdown1-content {
+    display: none;
+    position: absolute;
+    right: 80% !important;
+    background-color: #f1f1f1;
+    min-width: 50vw;
+    height: 50vh;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown1-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* .dropdown1 a:hover {background-color: #ddd;} */
+  
+  .show {display: block;}
+  /* shopping cart section area end */
+
+   /* on page load offer form will be appair start */
+
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 10px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50% !important;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.6s;
+    animation-name: animatetop;
+    animation-duration: 0.6s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: red !important;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+   
+  }
+  /* .modal-body {padding: 2px 16px;} */
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+@media(max-width:1366px){
+  #popup-ad{
+    height: 300px !important;
+  }
+}
+  /* sign-in form start */
+  /* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  #loginbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  #loginbtn:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .containerlog {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modallogin {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  @media(max-width:1366px){
+    .modallogin{
+      padding-top: 30px;
+    }
+    .modal-content{
+      margin: 0% auto 15% auto;
+    }
+  }
+  /* The Close Button (x) */
+  .closelogin {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .closelogin:hover,
+  .closelogin:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+  /* sign-in form end */
+
+  /* DETECT CAPS ON OR NOT START */
+  #text {display:none;color:red}
+  /* DETECT CAPS ON OR NOT END */
+
+ /* on page load offer form will be appair end */
+.style-nav{
+  /* background-color:#F4C724 ; */
+  background-color:#A3CB37 ;
+    /* box-shadow: 0px 2px 5px #000 !important; */
+    /* background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%); */
+    /* background-image: linear-gradient(to right, #ff4e50 0%, #fee140 100%); main */
+    /* background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%); */
+    
+}
+
+.badge1 {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 1px 6px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0px 0px 0px 5%;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    text-align: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content-menu-icon{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 60px;
+    text-align: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .style-hover-menu-icon{
+      text-align: center !important;
+  }
+  .dropdown:hover .dropdown-content-menu-icon {
+    display: block;
+  }
+.style-nav-hor-li{
+    padding: 0px 0px 0px 5%;
+}
+.style-nav-hor{
+    font-weight: bold;
+    color: #fff;
+    font-size: 2rem;
+}
+.style-nav-hor:hover{
+    color: #0A79DF;
+}
+.style-foody-color{
+    color: #000 !important;
+    font-weight: bold !important;
+    font-size: 2em !important;
+}
+.style-foody-h1{
+     font-family: segoe-ui;
+     /* color: #FFF222 !important; */
+     color: #000 !important;
+     /* color: #2C3335 !important; */
+}
+.style-foody-h1-2{
+     font-family: segoe-ui;
+     color: #FFF222 !important;
+     /* color: #000 !important; */
+     /* color: #2C3335 !important; */
+}
+/* .style-Search-div{
+    border: 1px solid #000 !important;
+} */
+.style-Search-div form input{
+    border: 1px solid #000 !important;
+    /* width: 400px !important; */
+}
+.style-Search-div form button{
+    color: #fff !important;
+    border: none !important;
+    
+}
+.search-hr-fixer{
+  z-index: 2 !important;
+  position: fixed !important;
+  /* margin: -50 0 0 0 !important; */
+}
+.style-menu-icon{
+    /* width: 40px !important;
+    height: 40px !important; */
+    font-size:30px;
+    color: #0c80e9;
+    cursor: pointer;
+}
+/* side menu nav */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    /* background-color: #20346d; */
+    background-color: #0A79DF;
+    opacity: .9;
+
+    /* background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%); */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 60px 0px 0px 0px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+    font-weight: bold;
+    /* font-family: segoe-ui bold; */
+  }
+  
+  .sidenav a:hover {
+    /* color: #fff !important; */
+    color: #FFF222 !important;
+   
+  }
+  .closebtn{
+      color:#000 !important;
+  }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 3rem;
+    margin: 0px 0px 0px 50px;
+  }
+  .style-hr{
+      background-color: #fff !important;
+  }
+  .style-menu-item-icon{
+      width: 25px !important;
+      height: 25px !important;
+  }
+  /* search bar in side menu */
+  .style-side-menu-search{
+    padding: 10% 0px 0px 5%;
+}
+@-moz-document url-prefix() {
+    .style-side-menu-search {
+        padding: 10% 0px 0px 5%;
+    }
+    .style-side-menu-search-input{
+        width: 200px !important;
+    }
+}
+.video-ad-mt{
+  margin: 100px 0 0 0 !important;
+}
+.style-add-btn{
+    width: 70px !important;
+    border: 1px solid #019031 !important;
+    cursor: default !important;
+    color: #019031 !important;
+    font-weight: bold !important;
+    margin: 0px 0px 1% 0px !important;
+}
+
+ .style-header-add-video{
+    width: 80%;
+    height: 250px !important;
+}
+/* .style-header-add-div{
+    background-color: #000;
+} */
+/* Best offer for you start*/
+
+/* timer coundown start */
+.timer-wrap {
+    width: 100%;
+    float: left;
+    padding: 20px 0px;
+}
+.timer-wrap .time {
+    display: none;
+}
+.timer-wrap .timer {
+    font: bold 44px 'times new roman';
+    color: #ffffff;
+    margin: 10px auto 0px;
+    text-align: center;
+}
+/* timer coundown end */
+.style-offer-zone{
+    background-color: #000 !important;
+    height: 80vh !important;
+}
+.style-offer-zone-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.style-offer-h1{
+    font-family: segoe-ui;
+    color: #EEC213;
+    /* text-shadow: 6px 5px 10px #E71C23;  */
+    /* font-size: 28pt; */
+    letter-spacing: 5px;
+    animation: text-glow 3s  infinite;
+}
+@keyframes text-glow {
+    0%{text-shadow: 6px 5px 10px #E71C23;}
+    25%{text-shadow: 6px 5px 6px #E71C23;}
+    50%{text-shadow: 6px 5px 3px #E71C23;}
+    75%{text-shadow: 6px 5px 6px #E71C23;}
+    100%{text-shadow: 6px 5px 10px #E71C23;}
+}
+.style-offer-img{
+    width: 40% !important;
+    height: 40% !important;
+    margin: 0px 0px 0px 30% !important;
+}
+.style-offer-img1{
+    width: 35% !important;
+    height: 35% !important;
+    margin: 0px 0px 0px 35% !important;
+}
+.style-offer-img2{
+    width: 35% !important;
+    height: 35% !important;
+    margin: 0px 0px 0px 30% !important;
+}
+.style-offer-img-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.style-offer-price-off{
+         color:#019031 !important;
+        padding: 0px 0px 0px 32% !important;
+}
+.style-offer-price{
+  color:#fff !important;
+  /* padding: 0px 0px 0px 25% !important; */
+  
+}
+.style-offer-span{
+    color: #019031 !important;
+}
+.style-offer-span-1{
+    color: #E8290B !important;
+}
+.style-offer-btn{
+    color: #000 !important;
+    margin: 0px 0px 10% 32% !important;
+    font-size: 10pt !important;
+    font-weight: bold !important;
+}
+.style-offer-hr{
+    display: none;
+}
+.img-zoom:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+}
+/* Best offer for you end*/
+
+.size1{
+  width: 200px !important;
+  height: 100px;
+}
+
+/* Give order on phone area start */
+.app-btn-color-1{
+    /* display: none; */
+    background-color: #EC761C !important;
+    border-radius: 3em / 3em !important;
+    color: #000 !important;
+    font-weight: bold !important;
+}
+.app-text-color-black{
+    color: #000 !important;
+    font-weight: bold !important;
+}
+.app-ph-no-color{
+    color:#fff !important;
+}
+.ph-no-shake:hover{
+    animation: shake 0.9s !important;
+  animation-iteration-count: infinite !important;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+/* Give order on phone area end */
+
+.style-slider-img{
+    width:100% !important; height:200px !important;
+}
+/* indian food */
+.style-in-food-h1{
+    color:#0A79DF !important;
+}
+.style-in-food-btn{
+    color: #000 !important;
+    margin: 0% 0% 5% 32% !important;
+    font-size: 10pt !important;
+    font-weight: bold !important;
+}
+/* pepsi section start */
+.style-pepsi-bg{
+    /* background-image: url("./food-img/pepsico.jpg") !important; */
+    width: 100%;
+    height: 300px;
+    background-color: #000;
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    /* background-position: center;  */
+    /* background-size: 100% 100%; */  
+}
+#myVideo {
+  min-width: 100%; 
+  min-height: 100%;
+}
+/* pepsi section end */
+
+/* map area start */
+.map-area-mobile{
+  display: none;
+}
+.mapouter{position:relative;text-align:right;height:409px;width:1080px;}
+.gmap_canvas {overflow:hidden;background:none!important;height:409px;width:1080px;}
+/* map area end */
+
+/* footer area start */
+.footer_style{
+    background: #000; color: white;
+   }
+.d-flex div{
+    text-align: center;
+    border-right: 1px solid grey;
+    border-top: 1px solid grey;
+  }
+
+  .d-flex div:last-child{
+   border-right:none;
+  }
+
+/* footer area end */
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 100px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 100px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 100px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 100px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 100px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+/* indian item multi-slider start */
+
+
+
+
+/* indian item multi-slider end */
+
+
+@media(max-width:1720px){
+  #loading-center{
+    position: fixed;
+    top: 40vh;
+    left: 10vw;
+    /* right: auto; */
+}
+.style-offer-zone{
+      height: 100vh !important;
+    }
+    .myfontsize{
+      font-size: 16pt !important;
+    }
+    .style-in-food-btn{
+        color: #000 !important;
+        margin: 0px 0px 10% 33% !important;
+        font-weight: bold !important;
+    }
+    .style-nav-menu{
+      font-size: 2em !important;
+    }
+    .style-Search-div input{
+       width: 200px !important;
+    }
+      .myfontsize{
+          font-size: 10pt !important;
+      }
+}
+
+
+@media(max-width:1280px){
+  #loading-center{
+    position: fixed;
+    top: 40vh;
+    left: 8vw;
+    /* right: auto; */
+}
+  .style-nav-menu{
+    font-size: 1em !important;
+  }
+  .style-Search-div input{
+     width: 100px !important;
+  }
+    .myfontsize{
+        font-size: 10pt !important;
+    }
+    .style-in-food-btn{
+        color: #000 !important;
+        margin: 0px 0px 10% 10% !important;
+        font-weight: bold !important;
+    }
+    .style-offer-zone{
+      height: 100vh !important;
+    }
+    
+    
+}
+
+@media(max-width:768px){
+  body{
+    overflow-x: hidden;
+  }
+  #loading-center{
+    position: fixed;
+    top: 30vh;
+    left: 1vw;
+    /* right: auto; */
+}
+#g2t{
+  font-size: 8pt;
+}
+#g2t img{
+  width: 25px;
+}
+
+#ssb2 img{
+  width: 15px;
+}
+.dropbtn {
+  border: none;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+
+.video-ad-mt{
+  margin: 100px 0 0 0 !important;
+  padding: 5px 0 0 0 !important;
+}
+    .style-Search-div{
+        display: none !important;
+    }
+    .style-menu-icon{
+        /* width: 25px !important;
+        height: 25px !important; */
+        font-size:25px;
+    }
+    .style-side-menu-search{
+        padding: 0px 0px 0px 5% !important; 
+    }
+    .style-side-menu-search-input{
+        width: 180px !important;
+        width: 160px !important;
+    }
+    .style-side-menu-search-btn{
+        margin: 0px 0px 0px 2% !important;
+    }
+    .style-sidenav-a{
+        font-size: 14pt !important;
+    }
+    .style-menu-item-icon{
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .style-header-add-video{
+        width: 100%;
+        height: 240px;
+    }
+    .style-header-add-video-1,.style-header-add-video-2{
+        display: none !important;
+    }
+    .style-header-add-video-3{
+        display: block !important;
+    }
+    /* best offer for you */
+.style-offer-zone{
+  height: 1500px !important;
+}
+    .style-offer-h1{
+        font-size: 20pt !important;
+        letter-spacing: 2px !important;
+    }
+    .style-offer-img{
+        width: 40% !important;
+        height: 40% !important;
+        margin: 0px 0px 0px 30% !important;
+        animation: drop 5s infinite !important;
+    }
+    .style-offer-img1{
+        width: 35% !important;
+        height: 35% !important;
+        margin: 0px 0px 0px 35% !important;
+        animation: drop 2s ease !important;
+    }
+    .style-offer-img2{
+        width: 35% !important;
+        height: 35% !important;
+        margin: 0px 0px 0px 33% !important;
+        animation: drop 2s ease !important;
+    }
+    .style-offer-hr{
+        display: block;
+        background-color: #fff !important;
+    }
+    .style-slider-img{
+        width:100% !important; height:200px !important;
+    }
+    .style-offer-price-off{
+        color:#019031 !important;
+       padding: 0px 0px 0px 10% !important;
+       font-size: 16pt !important;
+    }
+    .style-in-food-btn{
+        color: #000 !important;
+        margin: 0px 0px 10% 30% !important;
+        font-weight: bold !important;
+    }
+    .myfontsize{
+        font-size: 22pt !important;
+    }
+    .modal-content{
+        width: 90% !important;
+    }
+      /* Bick Amination area start */
+  .ani-left-img{
+    animation: bickMoveLeft 9s infinite;
+    position:relative;
+  }
+  .ani-right-img{
+    animation: bickMoveRight 9s infinite;
+    position:relative;
+  }
+  @keyframes bickMoveLeft {
+    from {left: 0%;}
+    to {left: 30%;}  
+  }
+  @keyframes bickMoveRight {
+    from {right: 0%;}
+    to {right: 30%;}
+  }
+  /* Bick Amination area end */
+
+  /* user reatind details start */
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+  /* user reatind details end */
+
+  /* pepsi video start */
+
+  .style-pepsi-bg{
+    
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+  
+}
+
+  /* pepsi video end */
+
+  /* map area for mobile start */
+  .map-area{display: none;}
+  .map-area-mobile{
+    display: block;
+  }
+  .mapouter{position:relative;text-align:right;height:409px;width:367px;}
+  .gmap_canvas {overflow:hidden;background:none!important;height:409px;width:367px;}
+  /* map area for mobile end */
+
+    /* footer area start */
+    li{
+        list-style: none;
+       }
+    
+       .d-flex span{
+        display: none;
+       }
+    /* footer area end */
+
+}
+

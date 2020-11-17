@@ -1,0 +1,56 @@
+.filter-price{
+    position: fixed;
+    top: 20%;
+    z-index: 4;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.filter-price img{
+    width: 35px;
+    cursor: pointer;
+    display: none;
+}
+
+.myfilter {
+    height: 80%;
+    width: 0;
+    position: fixed;
+    z-index: 5;
+    top: 20;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 1px 1px 6px 1px rgb(20, 20, 20);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .myfilter a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .myfilter a:hover {
+    color: #f1f1f1;
+  }
+  
+  .myfilter .close-filter-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .myfilter .close-filter-btn:hover {
+    color: red;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .myfilter {padding-top: 15px;}
+    .myfilter a {font-size: 18px;}
+  }

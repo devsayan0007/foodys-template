@@ -1,0 +1,7 @@
+.buttom-nav-main{
+    display: none !important;
+}
+.buttom-nav a{
+  /* display: inline-block !important; */
+  margin-left: 20%
+}
